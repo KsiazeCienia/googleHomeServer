@@ -1,5 +1,5 @@
-// var googleHomeNotifier = require('./google-home-notifier');
-
+var EnableNotification = require('./enableNotification');
+var UnableNotification = require('./unableNotification');
 
 function GoogleHome() {
     this.notificationStrategy = new EnableNotification();
@@ -15,20 +15,4 @@ GoogleHome.prototype = {
     }
 }
 
-function EnableNotification() {
-    this.handleNotification = function(message) {
-        // googleHomeNotifier.notify(message, function(res) {
-        //     console.log(res);
-        // });
-    }
-}
-
-function UnableNotification() {
-    this.handleNotification = function(message) {
-        console.log('nie można');
-    }
-}
-
-module.exports = UnableNotification;
-module.exports = EnableNotification;
 module.exports = GoogleHome;
