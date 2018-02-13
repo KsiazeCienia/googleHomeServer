@@ -1,11 +1,8 @@
-function UnableNotification() {
-    // function handleNotification (message) {
-    //     // googleHomeNotifier.notify(message, function(res) {
-    //     //     console.log(res);
-    //     // });
-    //     console.log('asdsadsadadsa');
-    // }
-}
 
+function UnableNotification() {
+    this.handleNotification = function(message) {
+        console.log('notification ignored');
+    }
+}
 
 module.exports = UnableNotification;
