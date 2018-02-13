@@ -1,9 +1,11 @@
-function EnableNotification() {
-    this.handleNotification = function(message) {
-        // googleHomeNotifier.notify(message, function(res) {
-        //     console.log(res);
-        // });
-    }
+function UnableNotification() {
+    // function handleNotification (message) {
+    //     // googleHomeNotifier.notify(message, function(res) {
+    //     //     console.log(res);
+    //     // });
+    //     console.log('asdsadsadadsa');
+    // }
 }
 
-module.exports = EnableNotification;
+
+module.exports = UnableNotification;
