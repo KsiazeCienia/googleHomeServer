@@ -26,7 +26,7 @@ app.post('/readmessage', function (req, res) {
     var result = serverError.isProperRequest(req);
     if (result.isProper) {
         console.log(req.body.message);
-        googleHome.handleNotification(message);
+        googleHome.handleNotification(req.body.message);
         return res.sendStatus(200);
     } else {
         console.log('Wrong request');
