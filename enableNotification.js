@@ -8,6 +8,4 @@ function EnableNotification() {
     }
 }
 
-
-
 module.exports = EnableNotification;
