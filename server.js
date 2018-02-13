@@ -10,6 +10,11 @@ const serverPort = 8082;
 
 app.use(bodyParser.json());
 
+
+app.get('/getMessage', function (req,res) {
+    res.status(200).send('dziala mordo')
+})
+
 app.get('/notifications/on',  function (req, res) {
     console.log('request on /notifications/on');
     res.sendStatus(200);
