@@ -23,29 +23,15 @@ app.get('/notifications/off', function (req, res) {
 })
 
 app.post('/readmessage', function (req, res) {
-
-    // var emptyBody = new BadRequest();
-    // return emptyBody.handle(req, res);
     var result = serverError.isProperRequest(req);
     if (result.isProper) {
-        console.log('tak');
+        console.log(req.body.message);
+        googleHome.handleNotification(message);
         return res.sendStatus(200);
     } else {
-        console.log('nie');
-        console.log(result.serverError.getErrorCode());
-        console.log(result.serverError.getErrorMessage());
+        console.log('Wrong request');
         return res.status(result.serverError.getErrorCode()).send(result.serverError.getErrorMessage());
     }
-    // if (!req.body) return res.status(400).send('Body can not be empty');
-    // console.log(req.body.message);
-    // var message = req.body.message;
-    //
-    // if (message) {
-    //     googleHome.handleNotification(message);
-    //     return res.sendStatus(200);
-    // } else {
-    //     return res.status(400).send('Request has to contain \'message\' key');
-    // }
 })
 
 app.listen(serverPort, function() {
