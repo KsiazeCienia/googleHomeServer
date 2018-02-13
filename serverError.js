@@ -36,7 +36,6 @@ inherits(EmptyBody, ServerError);
 
 EmptyBody.prototype.handle = function (req) {
     if (!req.body) {
-        // var result = new Result();
         result.isProper = false;
         result.serverError = this;
         return result;
@@ -54,7 +53,6 @@ inherits(BadRequest, ServerError);
 
 BadRequest.prototype.handle = function (req) {
     if (!req.body.message) {
-        // var result = new Result();
         result.isProper = false;
         result.serverError = this;
         return result;
