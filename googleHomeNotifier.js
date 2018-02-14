@@ -53,8 +53,4 @@ function GoogleHomeNotifier(ip) {
 }
 
 
-
-var g = new GoogleHomeNotifier('192.168.0.241');
-g.notify('what', function(res) {
-    console.log(res);
-});
+module.exports = GoogleHomeNotifier;

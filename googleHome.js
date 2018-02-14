@@ -14,10 +14,6 @@ function GoogleHome() {
     }
 }
 
-// var g = new GoogleHome();
-// g.setStrategy(new UnableNotification());
-// g.handleNotification('s');
-
 module.exports = function () {
     return new GoogleHome();
 }
